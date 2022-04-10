@@ -23,6 +23,11 @@ public class paciente {
 	private String direccion;
 	private String telefono;
 	private String cip;  // codigo de identificacion del paciente
+	
+	
+	// constructores
+	
+	
 	private int ss; // nro de seguridad social
 	
 	
