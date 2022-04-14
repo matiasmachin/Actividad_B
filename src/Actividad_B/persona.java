@@ -25,6 +25,7 @@ public class persona {
 	private String email;
 	private String nross; // nro de seguridad social
 	
+
 	// Constructores
 	
 
@@ -181,6 +182,10 @@ public class persona {
 		this.nross = nross;
 	}
 
+	
+	
+	
+	
 	SimpleDateFormat formatocorto =new SimpleDateFormat("dd/MM/yyyy"); // formato corto de fecha
 	
 	
