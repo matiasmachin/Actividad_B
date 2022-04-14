@@ -35,7 +35,7 @@ public class principal_hospital {
 		persona p3 = new persona("33333333C", "Julia", "Gonzalez", "Mujer",f3,"C/ El Faro", "806293754", "julia@gmail.com","38462377");
 		persona p4 = new persona("22222222B", "Ana", "Cejas", "Mujer",f4,"C/ Verodes", "735213354", "aana@gmail.com","38123453");
 		persona p5 = new persona("5555552X", "Maria", "Ortega", "Mujer",f4,"C/ Mendez ", "831333254", "maria@gmail.com","378153453");
-		
+				
 		examenes e1=new examenes(1, "Perfil-20", "Laboratorio", f5);
 		examenes e2=new examenes(2, "RX Mano Derecha", "Radiologia", f6);
 		examenes e3=new examenes (3, "Escanner Craneal", "Radiologia", f7);
@@ -51,6 +51,22 @@ public class principal_hospital {
 		personal_sanitario ps2=new personal_sanitario(3, p3, "Enfermera", "Nivel 1", 1000);
 		
 		personal_no_sanitario pns1=new personal_no_sanitario(3, p2, "Auxiliar Administrativo", "Administraci�n", 1300);
+		
+		producto pro1=new producto("Arroz", 1.5);
+		producto pro2=new producto("Azucar", 2.5);
+		producto pro3=new producto("Cafe", 1);
+		
+	    proveedores prv1=new proveedores(1, "B11222222", "Inversiones Sol", "Jose Perez", "666112233", "C/ Los Majuelos 4", "invsol@gmail.com",pro1);
+	    proveedores prv2=new proveedores(2, "B22333444", "Inversiones Luna", "Andres Luna", "888992233", "C/ Los Pajartos 14", "invluna@gmail.com",pro2);
+	    
+	    lista lst1=new lista(10, pro3);
+	    lista lst2=new lista(20, pro1);
+	    lista lst3=new lista(25, pro2);
+	    
+		
+		prv1.anadirlista(lst1);
+		prv1.anadirlista(lst2);
+		prv2.anadirlista(lst3);
 		
 		pa1.anadirexamen(e1);
 		pa1.anadirexamen(e2);
@@ -74,7 +90,10 @@ public class principal_hospital {
 		System.out.println(" DATOS DEL PERSONAL SANITARIO \n" + ps2.toString());
 		pausa();
 		System.out.println(" DATOS DEL PERSONAL NO SANITARIO \n" + pns1.toString());
-		
+		pausa();
+		System.out.println(" DATOS DEL PROVEEDOR  \n" + prv1.toString());
+		pausa();
+		System.out.println(" DATOS DEL PROVEEDOR  \n" + prv2.toString());
 	}
 
 	
