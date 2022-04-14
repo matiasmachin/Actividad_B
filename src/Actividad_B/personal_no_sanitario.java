@@ -118,7 +118,7 @@ public class personal_no_sanitario{
 				 perso + 
 				"Profesion: " +profesion+ "\n"+
 				"Departamento: "+departamento+ "\n"+
-				"Salario: " + salario+"\n");
+				"Salario: " + salario+" €\n");
 	}
 	
 	

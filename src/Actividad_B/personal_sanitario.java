@@ -107,7 +107,7 @@ public class personal_sanitario {
 				 perso + 
 				"Profesion: " +profesion+ "\n"+
 				"Especialidad: "+especialidad+ "\n"+
-				"Salario: " + salario+"\n");
+				"Salario: " + salario+ " €\n");
 				
 	}
 	

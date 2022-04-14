@@ -2,7 +2,6 @@ package Actividad_B;
 
 import java.time.Instant;
 import java.util.*;
-import java.util.GregorianCalendar;
 
 public class principal_hospital {
 	
@@ -28,15 +27,38 @@ public class principal_hospital {
 		personal_sanitario ps1=new personal_sanitario(1, p4, "Medico", "Traumatologo", 1200);
 		personal_sanitario ps2=new personal_sanitario(3, p3, "Enfermera", "Nivel 1", 1000);
 		
-		personal_no_sanitario pns1=new personal_no_sanitario(3, p2, "Auxiliar Administrativo", "Administración", 1300);
+		personal_no_sanitario pns1=new personal_no_sanitario(3, p2, "Auxiliar Administrativo", "Administraciï¿½n", 1300);
 		
 		System.out.println(" DATOS DE LA PERSONA \n" + p1.toString());
+		pausa();
 		System.out.println(" DATOS DE LA PERSONA \n" + p2.toString());
+		pausa();
 		System.out.println(" DATOS DEL PACIENTE \n" + pa1.toString());
+		pausa();
 		System.out.println(" DATOS DEL PERSONAL SANITARIO \n" + ps1.toString());
+		pausa();
 		System.out.println(" DATOS DEL PERSONAL SANITARIO \n" + ps2.toString());
+		pausa();
+		
 		System.out.println(" DATOS DEL PERSONAL NO SANITARIO \n" + pns1.toString());
 		
 	}
+
+	
+	public static void pausa() { // Metodo para generar una pausa hasta que se pulse una tecla
+		
+		String seguir;
+	    Scanner teclado = new Scanner(System.in);
+	    System.out.println("Press Enter key to continue...");
+	    System.out.println("Presione  una tecla para continuar...");
+	    try
+	    {
+	        seguir = teclado.nextLine();
+	    }
+	    catch(Exception e)
+	    {}
+		    
+	}
+
 
 }
