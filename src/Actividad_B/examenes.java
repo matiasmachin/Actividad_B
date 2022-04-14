@@ -1,4 +1,6 @@
-/**
+/** 
+ * Registro de Examenes medicos
+ *   
  * 
  */
 package Actividad_B;
