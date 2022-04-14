@@ -1,4 +1,5 @@
 /**
+* Registro de patologias
  * 
  */
 package Actividad_B;

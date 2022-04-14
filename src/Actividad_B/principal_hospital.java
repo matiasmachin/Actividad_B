@@ -1,3 +1,6 @@
+/*
+ *  Menu Principal
+ */
 package Actividad_B;
 
 import java.awt.*;

@@ -1,4 +1,5 @@
 /**
+* Registro de personal no sanitario
  * 
  */
 package Actividad_B;

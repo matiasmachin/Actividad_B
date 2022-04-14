@@ -1,4 +1,5 @@
-/**
+/*
+* Registro de pacientes
  * 
  */
 package Actividad_B;

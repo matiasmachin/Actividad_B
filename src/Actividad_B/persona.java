@@ -1,4 +1,5 @@
 /**
+* Registro de personas
  * 
  */
 package Actividad_B;

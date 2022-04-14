@@ -1,4 +1,5 @@
 /**
+ *  Registro de personal sanitario
  * 
  */
 package Actividad_B;
