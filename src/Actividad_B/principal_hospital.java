@@ -1,5 +1,10 @@
 package Actividad_B;
 
+import java.awt.*;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.nio.channels.NonWritableChannelException;
 import java.time.Instant;
 
 import java.util.*;
@@ -32,6 +37,10 @@ public class principal_hospital {
 		examenes e2=new examenes(2, "RX Mano Derecha", "Radiologia", f6);
 		examenes e3=new examenes (3, "Escanner Craneal", "Radiologia", f7);
 		
+		patologias pt1=new patologias(1, "Encefalea", "Dolor fuerte en la cabeza, especificamente en zona de la frente", "Paracetamol 500 mg cada 8 horas por 3 dias", f7);
+		patologias pt2=new patologias(2, "Crisis asmatifoide", "Deficiencia respiratoria", "Salbutamol 100 microgramos, un puff cada 8 horas por 7 dias", f6);
+		patologias pt3=new patologias(2, "Hipertension", "Mareos y nauseas", "Olmesartan de 40mg, Una capsula en la mañana" , f5);
+		
 		
 		paciente pa1=new paciente(1,p1,123345);
 		paciente pa2=new paciente(2,p5,654321);
@@ -43,8 +52,11 @@ public class principal_hospital {
 		pa1.anadirexamen(e1);
 		pa1.anadirexamen(e2);
 		pa2.anadirexamen(e3);
+		pa1.anadirpatalogia(pt1);
+		pa1.anadirpatalogia(pt2);
+		pa2.anadirpatalogia(pt3);
 		
-		
+	
 		
 		System.out.println(" DATOS DE LA PERSONA \n" + p1.toString());
 		pausa();
@@ -58,7 +70,6 @@ public class principal_hospital {
 		pausa();
 		System.out.println(" DATOS DEL PERSONAL SANITARIO \n" + ps2.toString());
 		pausa();
-		
 		System.out.println(" DATOS DEL PERSONAL NO SANITARIO \n" + pns1.toString());
 		
 	}
@@ -79,5 +90,5 @@ public class principal_hospital {
 		    
 	}
 
-
+		
 }

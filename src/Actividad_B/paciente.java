@@ -15,13 +15,16 @@ import java.util.*;
 public class paciente {
 	
 	private final int maxexamenes=10;
+	private final int maxpatoligia=100;
 	// atributos
 	
 	private int nrodehistoria;
 	private int cip;
 	private persona perso;
 	private examenes[] examen;
+	private patologias[] patologia;
 	private int nroexamenes;
+	private int nropatologias;
 	
 	
 	public paciente(int nrodehistoria, String dni, String nombre, String apellidos, String sexo, GregorianCalendar fechanac, String direccion, String telefono, String email, String nross, int cip ) {
@@ -30,6 +33,8 @@ public class paciente {
 		this.perso=new persona(dni, nombre, apellidos, sexo, fechanac, direccion, telefono, email, nross);
 		this.cip=cip;
 		this.examen=new examenes[maxexamenes];
+		this.patologia=new patologias[maxpatoligia];
+		this.nropatologias=0;
 		this.nroexamenes=0;
 	}
 	
@@ -94,7 +99,7 @@ public class paciente {
 		this.perso = perso;
 	}
 
-	
+	// Examenes
 	
 	  public void anadirexamen(examenes a) { if (nroexamenes<maxexamenes) {
 	  this.examen[nroexamenes]= a; nroexamenes++; } else {
@@ -104,9 +109,17 @@ public class paciente {
 	  0;i<nroexamenes;i++) { examencadena+=this.examen[i].toString()+"\n";
 	  
 	  } return examencadena; }
+	  
+	  // Patologias
 	 
+	  public void anadirpatalogia(patologias a) { if (nropatologias<maxpatoligia) {
+		  this.patologia[nropatologias]= a; nropatologias++; } else {
+		  System.out.println("No se pueden anadir patologias!!..Cupo Lleno"); } }
 	
-	
+	  private String mostrarpatologias() { String patologiacadena=""; for (int i =
+			  0;i<nropatologias;i++) { patologiacadena+=this.patologia[i].toString()+"\n";
+			  
+			  } return patologiacadena; }
 	
 
 
@@ -116,7 +129,11 @@ public class paciente {
 				"Nro C.I.P: " + cip  +
 				 perso + "\n" +
 				" Se ha realizado los siguientes examenes : \n"+
-				 mostrarexamenes());
+				 mostrarexamenes() +"\n"+
+				" El Paciente a presentado las siguientes patologias : \n"+
+				 mostrarpatologias());
+				
+			
 	}
 
 
